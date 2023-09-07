@@ -1,25 +1,20 @@
+// src/App.tsx
+import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import EmailForm from '../components/EmailForm';
 
-const Home: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
-      </IonContent>
-    </IonPage>
-  );
-};
 
-export default Home;
+const App: React.FC = () => (
+  <IonPage>
+    <IonHeader>
+      <IonToolbar>
+        <IonTitle>Email App</IonTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent>
+      <EmailForm />
+    </IonContent>
+  </IonPage>
+);
+
+export default App;
